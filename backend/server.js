@@ -6,8 +6,6 @@ import userRouter from "./routes/userroute.js";
 import 'dotenv/config'
 import cartRouter from "./routes/cartroute.js";
 import orderRouter from "./routes/orderRoute.js";
-
-const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 4000;
 
