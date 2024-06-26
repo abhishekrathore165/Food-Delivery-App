@@ -14,10 +14,7 @@ const port = process.env.PORT || 4000;
 app.use(express.json())
   app.use(cors({origin: 'https://food-delivery-app-nynv.onrender.com'}));
 
-app.get('/test-cors', (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'https://food-delivery-app-nynv.onrender.com');
-  res.send('CORS enabled');
-});
+
 
 // db connection
 connectDB();
@@ -32,6 +29,11 @@ app.use("/api/order",orderRouter)
 app.get("/",(req,res)=>{
     res.send("API Working")
 })
+
+app.get('/test-cors', (req, res) => {
+  res.set('Access-Control-Allow-Origin', 'https://food-delivery-app-nynv.onrender.com');
+  res.send('CORS enabled');
+});
 
 
 app.listen(port,()=>{console.log(`Server Started on http://localhost:${port}`)})
