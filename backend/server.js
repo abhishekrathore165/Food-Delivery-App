@@ -12,10 +12,10 @@ const port = process.env.PORT || 4000;
 // middleware 
 
 app.use(express.json())
-  app.use(cors(*));
+  app.use(cors({origin: 'https://food-delivery-app-nynv.onrender.com'}));
 
 app.get('/test-cors', (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'http://yourfrontenddomain.com');
+  res.set('Access-Control-Allow-Origin', 'https://food-delivery-app-nynv.onrender.com');
   res.send('CORS enabled');
 });
 
