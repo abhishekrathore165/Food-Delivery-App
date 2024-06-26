@@ -14,6 +14,11 @@ const port = process.env.PORT || 4000;
 app.use(express.json())
   app.use(cors({ origin: 'https://food-delivery-app-nynv.onrender.com' }));
 
+app.get('/test-cors', (req, res) => {
+  res.set('Access-Control-Allow-Origin', 'http://yourfrontenddomain.com');
+  res.send('CORS enabled');
+});
+
 // db connection
 connectDB();
 
