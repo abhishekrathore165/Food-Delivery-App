@@ -30,10 +30,6 @@ app.get("/",(req,res)=>{
     res.send("API Working")
 })
 
-app.get('/test-cors', (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'https://food-delivery-app-nynv.onrender.com');
-  res.send('CORS enabled');
-});
 
 
 app.listen(port,()=>{console.log(`Server Started on http://localhost:${port}`)})
