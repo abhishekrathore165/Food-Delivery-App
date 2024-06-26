@@ -27,7 +27,7 @@ app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
 
 app.get("/",(req,res)=>{
-    res.send("API Working")
+    res.send("Server Start ")
 })
 
 
